@@ -1,0 +1,18 @@
+Package: PPS.Analysis
+Title: Anaysis of PPS Simulated Data
+Version: 0.0.0.9000
+Authors@R: 
+    person("Basanta", "Khakurel", , "basanta.khakurel@selu.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-0511-2215"))
+Description: An R package for using Posterior Predictive Simulated data from morphological characters using different models of evolution.
+License: MIT + file LICENSE
+Depends: 
+  R (>= 2.10)
+Imports:
+  tidyverse, ggplot2, mixtools
+Suggests:
+  knitr, rmarkdown
+VignetteBuilder: knitr
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.0
