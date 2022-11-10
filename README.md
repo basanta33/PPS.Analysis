@@ -1,5 +1,9 @@
-# Final Project for Biological Data Analysis Class (Fall 2022)
+# PPS_Analysis
 
-## Basanta Khakurel
+An R package for using Posterior Predictive Simulated data from morphological characters using different models of evolution. 
 
+To install `PPS_Analysis` directly form github, use the package `devtools`:
+
+```
+devtools::install_github("basanta33/PPS_Analysis")
 
