@@ -1,4 +1,4 @@
-#' Linear Model Testing between values of two columns. 
+#' Linear Model Testing between values of two columns
 
 #' @param path_to_data is the directory path where the data file is.
 #'
