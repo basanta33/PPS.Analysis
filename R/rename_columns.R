@@ -5,7 +5,7 @@
 #' @return gives you the data frame containing cleaned column names.
 #'
 #' @examples 
-#' rename_col("data/simulated_data_pps_data.csv")
+#' my_data <- rename_col("data/simulated_data_pps_data.csv")
 #'
 
 #function to clean up the columns from the data file
