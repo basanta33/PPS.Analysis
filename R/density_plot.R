@@ -9,9 +9,9 @@
 #'
 #' @examples 
 #' plot <- den_plot(simdata, empdata$column1, simdata$column1, "Title of the X-Axis")
-#'
+#' @export
 
-#function to remove blank columns from the data file
+#function to plot any column you desire 
 den_plot <- function(sim_data, emp_col, sim_col, xlabel){
   plot <- ggplot(sim_data, aes(x=sim_col)) +
     geom_density(alpha = 0.7,  fill="lightblue") + 

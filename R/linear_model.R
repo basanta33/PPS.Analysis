@@ -8,7 +8,8 @@
 #'
 #' @examples 
 #' linear_model(mydata, mydata$col1, mydata$col2)
-#'
+#' @export
+
 # function for linear model
 linear_model <- function(data, x, y){
   model_fit <- lm(y ~ x, data = data) # model fitting for two columns

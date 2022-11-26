@@ -6,7 +6,7 @@
 #'
 #' @examples 
 #' data_w_values <- remove_blank("mydata")
-#'
+#' @export
 
 #function to remove blank columns from the data file
 remove_blank <- function(data){

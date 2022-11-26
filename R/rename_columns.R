@@ -6,7 +6,7 @@
 #'
 #' @examples 
 #' my_data <- rename_col("data/simulated_data_pps_data.csv")
-#'
+#' @export
 
 #function to clean up the columns from the data file
 rename_col <- function(path_to_data){

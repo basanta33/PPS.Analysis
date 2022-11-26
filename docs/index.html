@@ -68,7 +68,7 @@
       </header><div class="row">
   <div class="contents col-md-9">
 <div class="section level1">
-<div class="page-header"><h1 id="pps_analysis">PPS_Analysis<a class="anchor" aria-label="anchor" href="#pps_analysis"></a>
+<div class="page-header"><h1 id="pps-analysis">PPS Analysis<a class="anchor" aria-label="anchor" href="#pps-analysis"></a>
 </h1></div>
 <p>An R package for using Posterior Predictive Simulated data from morphological characters using different models of evolution.</p>
 <p>To install <code>PPS_Analysis</code> directly form github, use the package <code>remotes</code>:</p>
@@ -76,33 +76,49 @@
 <div class="section level2">
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<ul>
-<li>What does it do?</li>
-<li>What type of data is it meant to work with?</li>
-<li>What are the major outputs of your R package?</li>
-</ul>
+<p>This R package consists of 5 simple functions to perform some tasks with data that is generated using Posterior Predictive Analyses in <code>revbayes</code>. We can clean up the data using some functions, plot the data using one of them, calculate the effect size of the column values of the data obtained and perform a linear regression in any specific column of the dataset.</p>
+<p>Some functions return the data.frame as the output, some give out plots and some just give numerical values as the output.</p>
+<p>The utilities of the functions in the package are needed to be done multiple times with different data sets so, I created those specific function so that they’ll help me without any need of rewriting the codes several times.</p>
+<p>Some of the tasks of the functions are depended on other R Packages like <code>tidyverse</code>, <code>janitor</code>, and <code>ggplot2</code>. Please make sure you have those packages installed in your R to try out my functions.</p>
+<hr>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<ul>
-<li>Are there any R packages that this package depends on?
-<ul>
-<li>Yes. <code>tidyverse</code>, <code>janitor</code>, <code>ggplot2</code>
-</li>
-</ul>
-</li>
-</ul>
 <pre class="{r}"><code><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"janitor"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ggplot2"</span><span class="op">)</span></span></code></pre>
+<hr>
 </div>
 <div class="section level2">
 <h2 id="usage-examples">Usage Examples<a class="anchor" aria-label="anchor" href="#usage-examples"></a>
 </h2>
-<p>Provide some context for why someone might want to do whatever this R package does</p>
-<pre class="{r}"><code></code></pre>
-<pre class="{r}"><code></code></pre>
+<p>These are the columns of my data set.</p>
+<ul>
+<li><p>Number Invariant Sites - This is the column which consists information with characters that have varying rates of evolution.</p></li>
+<li><p>Max GC - This is the number of highest Guanine-Cytosine content in the sequence.</p></li>
+<li><p>Max Invariant Block Length - This column shows the maximum number of blocks that has no varying sites.</p></li>
+<li><p>Max Pairwise Difference -This is the column with the statistic that intends to be sensitive to the model of rate-variation among site and/or among branches.</p></li>
+<li><p>Max Variable Block Length - This column shows the maximum number of blocks that has varying sites.</p></li>
+<li><p>Min GC - This is the number of minimum Guanine-Cytosine content in the sequence.</p></li>
+<li><p>Min Pairwise Difference - This is the column with the statistic that finds the pair of sequences that has the smallest pairwise distance.</p></li>
+<li><p>Number Invariable Block - This is the number of invariable blocks in the sequence.</p></li>
+<li><p>Mean GC - This is the average GC content over all sequences.</p></li>
+<li><p>Var GC - This tests if the variance in GC content between sequence is modeled plausibly.</p></li>
+<li><p>Theta - This test statistic describes the genetic diversity in a population.</p></li>
+<li><p>Tajima-D - This test statistic is the difference between two measures of genetic diversity: the mean pairwise differences and the number of segregating sites scaled to be in a neutrally evolving population of constant size.</p></li>
+<li><p>Tajima-Pi - This is the sum of the pairwise differences divided by the number of pairs.</p></li>
+<li><p>Segregating-Sites - This test statistic show the positions that show polymorphisms between related genes in a sequence.</p></li>
+</ul>
+<div class="section level6">
+<h6 id="here-are-some-functions-and-their-examples">Here are some functions and their examples.<a class="anchor" aria-label="anchor" href="#here-are-some-functions-and-their-examples"></a>
+</h6>
+<p>As you can see in the list above, the column names contain spaces and they are somewhat uneasy to work with, so the first function I have will clean all the column names for easy use, for this we need another R package <code>janitor</code></p>
+<pre class="{r}"><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sfirke/janitor" class="external-link">janitor</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span></code></pre>
+<pre class="{r}"><code><span><span class="va">my_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/rename_col.html">rename_col</a></span><span class="op">(</span><span class="st">"data/simulated_data_pps_data.csv"</span><span class="op">)</span></span></code></pre>
+<p>Thank you for installing the package. Hope the tutorial page will give you more insight on the usage of the package.</p>
+</div>
 </div>
 </div>
   </div>

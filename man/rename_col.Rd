@@ -16,6 +16,5 @@ gives you the data frame containing cleaned column names.
 Remove the columns with no data in it
 }
 \examples{
-rename_col("data/simulated_data_pps_data.csv")
-
+my_data <- rename_col("data/simulated_data_pps_data.csv")
 }

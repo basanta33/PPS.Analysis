@@ -54,13 +54,21 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">linear_model</span><span class="op">(</span><span class="va">path_to_data</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">linear_model</span><span class="op">(</span><span class="va">data</span>, <span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>path_to_data</dt>
-<dd><p>is the directory path where the data file is.</p></dd>
+    <dl><dt>data</dt>
+<dd><p>is the data set you want to use</p></dd>
+
+
+<dt>x</dt>
+<dd><p>is the x column of the data set</p></dd>
+
+
+<dt>y</dt>
+<dd><p>is the y column of the data set</p></dd>
 
 </dl></div>
     <div id="value">
@@ -72,9 +80,8 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">linear_model</span><span class="op">(</span><span class="st">"data/col_with_values"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in linear_model("data/col_with_values"):</span> could not find function "linear_model"</span>
-<span class="r-in"><span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">linear_model</span><span class="op">(</span><span class="va">mydata</span>, <span class="va">mydata</span><span class="op">$</span><span class="va">col1</span>, <span class="va">mydata</span><span class="op">$</span><span class="va">col2</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in linear_model(mydata, mydata$col1, mydata$col2):</span> could not find function "linear_model"</span>
 </code></pre></div>
     </div>
   </div>

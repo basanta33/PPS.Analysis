@@ -4,10 +4,10 @@
 \alias{remove_blank}
 \title{Remove the columns with no data in it}
 \usage{
-remove_blank(path_to_data)
+remove_blank(data)
 }
 \arguments{
-\item{path_to_data}{is the directory path where the data file is.}
+\item{data}{is the data set you want to remove the blank columns from}
 }
 \value{
 gives you the data frame containing columns that has data in it.
@@ -16,6 +16,5 @@ gives you the data frame containing columns that has data in it.
 Remove the columns with no data in it
 }
 \examples{
-remove_blank("data/cleaned_names_simulated.csv")
-
+data_w_values <- remove_blank("mydata")
 }
