@@ -2,7 +2,7 @@
 % Please edit documentation in R/density_plot.R
 \name{den_plot}
 \alias{den_plot}
-\title{create a density plot for the desired columns of the data set with an abline using the empirical data}
+\title{create a density plot for the desired columns of the data set with a regression line using the empirical data}
 \usage{
 den_plot(sim_data, emp_col, sim_col, xlabel)
 }
@@ -19,7 +19,7 @@ den_plot(sim_data, emp_col, sim_col, xlabel)
 gives you the resulting plot.
 }
 \description{
-create a density plot for the desired columns of the data set with an abline using the empirical data
+create a density plot for the desired columns of the data set with a regression line using the empirical data
 }
 \examples{
 plot <- den_plot(simdata, empdata$column1, simdata$column1, "Title of the X-Axis")

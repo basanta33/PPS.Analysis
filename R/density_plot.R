@@ -1,4 +1,4 @@
-#' create a density plot for the desired columns of the data set with an abline using the empirical data
+#' create a density plot for the desired columns of the data set with a regression line using the empirical data
 
 #' @param sim_data is the simulated data set you want to use for the plot
 #' @param emp_col is the column from the empirical data set  

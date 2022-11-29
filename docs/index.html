@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">PPS.Analysis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0</span>
       </span>
     </div>
 
@@ -76,23 +76,20 @@
 <div class="section level2">
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<p>This R package consists of 5 simple functions to perform some tasks with data that is generated using Posterior Predictive Analyses in <code>revbayes</code>. We can clean up the data using some functions, plot the data using one of them, calculate the effect size of the column values of the data obtained and perform a linear regression in any specific column of the dataset.</p>
-<p>Some functions return the data.frame as the output, some give out plots and some just give numerical values as the output.</p>
+<p>This R package consists of 5 simple functions to perform some tasks with summary statistics data that is generated using Posterior Predictive Analyses in <code>revbayes</code>. The summary stats I have as the example is obtained from Mk model.</p>
+<p>We can clean up the data using some functions, plot the data using one of them, calculate the effect size of the column values of the data obtained and perform a linear regression in any specific column of the data set.</p>
+<p>Some functions return the data.frame as the output, some give out plots and some just give numerical values as the output. Following are the functions included in this R Package. + Clean Column Names + Remove Unnecessary Columns + Linear Model Testing + Density Plot + Effect Size Calculation</p>
 <p>The utilities of the functions in the package are needed to be done multiple times with different data sets so, I created those specific function so that they’ll help me without any need of rewriting the codes several times.</p>
 <p>Some of the tasks of the functions are depended on other R Packages like <code>tidyverse</code>, <code>janitor</code>, and <code>ggplot2</code>. Please make sure you have those packages installed in your R to try out my functions.</p>
 <hr>
 </div>
 <div class="section level2">
-<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+<h2 id="dependencies">Dependencies<a class="anchor" aria-label="anchor" href="#dependencies"></a>
 </h2>
 <pre class="{r}"><code><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"janitor"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ggplot2"</span><span class="op">)</span></span></code></pre>
 <hr>
-</div>
-<div class="section level2">
-<h2 id="usage-examples">Usage Examples<a class="anchor" aria-label="anchor" href="#usage-examples"></a>
-</h2>
 <p>These are the columns of my data set.</p>
 <ul>
 <li><p>Number Invariant Sites - This is the column which consists information with characters that have varying rates of evolution.</p></li>
@@ -117,7 +114,7 @@
 <pre class="{r}"><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sfirke/janitor" class="external-link">janitor</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span></code></pre>
 <pre class="{r}"><code><span><span class="va">my_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/rename_col.html">rename_col</a></span><span class="op">(</span><span class="st">"data/simulated_data_pps_data.csv"</span><span class="op">)</span></span></code></pre>
-<p>Thank you for installing the package. Hope the tutorial page will give you more insight on the usage of the package.</p>
+<p>Thank you for installing the package. Hope the <a href="https://basanta33.github.io/PPS.Analysis/articles/Package_Tutorial.html" class="external-link">tutorial page</a> will give you more insight on the usage of the package.</p>
 </div>
 </div>
 </div>

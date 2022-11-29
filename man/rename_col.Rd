@@ -2,7 +2,7 @@
 % Please edit documentation in R/rename_columns.R
 \name{rename_col}
 \alias{rename_col}
-\title{Remove the columns with no data in it}
+\title{Rename the column names for easy use}
 \usage{
 rename_col(path_to_data)
 }
@@ -13,7 +13,7 @@ rename_col(path_to_data)
 gives you the data frame containing cleaned column names.
 }
 \description{
-Remove the columns with no data in it
+Rename the column names for easy use
 }
 \examples{
 my_data <- rename_col("data/simulated_data_pps_data.csv")

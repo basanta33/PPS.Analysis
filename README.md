@@ -1,10 +1,3 @@
----
-title: "Khakurel_PKG"
-author: "Basanta Khakurel"
-date: "`r Sys.Date()`"
-output: html_document
----
-
 # PPS Analysis
 
 An R package for using Posterior Predictive Simulated data from morphological characters using different models of evolution.
@@ -17,10 +10,16 @@ remotes::install_github("basanta33/PPS_Analysis")
 
 ## Introduction
 
-This R package consists of 5 simple functions to perform some tasks with data that is generated using Posterior Predictive Analyses in `revbayes`. 
-We can clean up the data using some functions, plot the data using one of them, calculate the effect size of the column values of the data obtained and perform a linear regression in any specific column of the dataset. 
+This R package consists of 5 simple functions to perform some tasks with summary statistics data that is generated using Posterior Predictive Analyses in `revbayes`. The summary stats I have as the example is obtained from Mk model. 
 
-Some functions return the data.frame as the output, some give out plots and some just give numerical values as the output. 
+We can clean up the data using some functions, plot the data using one of them, calculate the effect size of the column values of the data obtained and perform a linear regression in any specific column of the data set. 
+
+Some functions return the data.frame as the output, some give out plots and some just give numerical values as the output. Following are the functions included in this R Package. 
++ Clean Column Names
++ Remove Unnecessary Columns
++ Linear Model Testing 
++ Density Plot 
++ Effect Size Calculation
  
 The utilities of the functions in the package are needed to be done multiple times with different data sets so, I created those specific function so that they'll help me without any need of rewriting the codes several times. 
 
@@ -28,7 +27,7 @@ Some of the tasks of the functions are depended on other R Packages like `tidyve
 
 --- 
 
-## Installation
+## Dependencies
 
 ```{r}
 install.packages("tidyverse")
@@ -36,8 +35,6 @@ install.packages("janitor")
 install.packages("ggplot2")
 ```
 ---
-
-## Usage Examples
 
 These are the columns of my data set. 
 
@@ -83,4 +80,4 @@ library(tidyverse)
 my_data <- rename_col("data/simulated_data_pps_data.csv")
 ```
 
-Thank you for installing the package. Hope the tutorial page will give you more insight on the usage of the package.
+Thank you for installing the package. Hope the [tutorial page](https://basanta33.github.io/PPS.Analysis/articles/Package_Tutorial.html) will give you more insight on the usage of the package.

@@ -1,4 +1,4 @@
-#' Remove the columns with no data in it
+#' Rename the column names for easy use
 
 #' @param path_to_data is the directory path where the data file is.
 #'
